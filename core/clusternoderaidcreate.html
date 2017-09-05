@@ -1,0 +1,88 @@
+$def with (content)
+
+<form id="formclusterraid" method="post">
+    <fieldset class="createdialog">
+        <div class="left">
+            <p>$_("clusternodediskunused")</p><br />
+            <select id="clusternodediskunused" name="clusternodediskunused" style="height:150px;" class="ui-widget-content ui-corner-all" multiple="true">
+                $if content.clusternodediskunused:
+                    $for disk in content.clusternodediskunused:
+                        <option value="$disk">$disk</option>
+                $else:
+                    <option class="static" value="$_('nounuseddisk')">$_("nounuseddisk")</option>
+            </select>
+        </div>
+        <div class="center">    
+            <ul>
+                <li><button id="raidadd">$_("add")</button></li>
+                <li><button id="raidmove">$_("remove")</button></li>
+                <li><button id="raidaddall">$_("addall")</button></li>
+                <li><button id="raidremoveall">$_("removeall")</button></li>
+            </ul>
+        </div>
+        <div class="right">
+            <p>$_("clusternodediskselected")</p><br />
+            <select name="clusternewraiddev" id="clusternewraiddev" style="height:150px;" class="ui-widget-content ui-corner-all" multiple="true">
+            </select><br /><br />
+        </div>
+        <div>
+            <label for="clusterraidlv">$_("clusterraidlv")</label>
+            <select name="clusterraidlv" id="clusterraidlv">
+                <option name="0">RAID0</option>
+                <option name="1">RAID1</option>
+                <option name="10">RAID10</option>
+                <option name="5">RAID5</option>
+                <option name="6">RAID6</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="clusterraidsz">$_("clusterraidsz")</label>
+            <select name="clusterraidsz" id="clusterraidsz">
+                <option name="0">4K</option>
+                <option name="1">8K</option>
+                <option name="2">16K</option>
+                <option name="3">32K</option>
+                <option name="4">64K</option>
+                <option name="5">128K</option>
+                <option name="6" selected="selected">256K</option>
+                <option name="7">512K</option>
+                <option name="8">1M</option>
+                <option name="9">2M</option>
+                <option name="10">4M</option>
+                <option name="11">8M</option>
+                <option name="12">16M</option>
+                <option name="13">32M</option>
+            </select>
+        </div>
+        <div>
+        <label>&nbsp;</label>
+    </fieldset>
+</form>
+<script type="text/javascript">
+    $(ELT)(function(){
+        $(ELT)("#clusternewraiddev").dblclick(function() {$(ELT).listtolist("clusternewraiddev","clusternodediskunused","move",false);});
+        $(ELT)("#clusternodediskunused").dblclick(function() {$(ELT).listtolist("clusternodediskunused","clusternewraiddev","move",false);});
+        $(ELT)("#raidadd").button({
+            text: false,
+            icons: {
+                primary: "ui-icon-triangle-1-e"
+            }
+        }).bind("click",function() {$(ELT).listtolist("clusternodediskunused","clusternewraiddev","move",false);return false;});
+        $(ELT)("#raidmove").button({
+            text: false, icons: { primary: "ui-icon-triangle-1-w" }
+        }).bind("click",function() {$(ELT).listtolist("clusternewraiddev","clusternodediskunused","move",false);return false;});
+        $(ELT)("#raidaddall").button({
+            text: false,
+            icons: {
+                primary: "ui-icon-seek-next"
+            }
+        }).bind("click",function() {$(ELT).listtolist("clusternodediskunused","clusternewraiddev","move",true);return false;});
+        $(ELT)("#raidremoveall").button({
+            text: false,
+            icons: {
+                primary: "ui-icon-seek-prev"
+            }
+        }).bind("click",function() {$(ELT).listtolist("clusternewraiddev","clusternodediskunused","move",true);return false;});
+    });
+</script>

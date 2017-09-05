@@ -1,0 +1,66 @@
+$def with (content)
+
+<table>										  
+  <tr>
+    <th>$_('cluster_client_node_ipaddr')</th>
+    <!--<th>$_('clusternodecifsstatus')</th>-->
+    <!--<th>$_('clusternodenfsstatus')</th>-->
+    <th>$_('cluster_client_node_status')</th>
+  </tr>
+  
+  $if len(content.clusterclientnodes)>0: 
+      $for clusterclientnode in content.clusterclientnodes:	
+          <tr>
+            <td>
+              <span>$clusterclientnode['node_name']</span>
+              <dl class="opercommand">
+                <dd><a title="$_('delete')" href="javascript:void(0);" onclick="cluster_client_node_delete('$clusterclientnode['service_name']','$clusterclientnode['node_name']')" class="ui-icon ui-icon-inline ui-icon-trash">&nbsp;</a></dd>
+              </dl>
+            </td>
+            
+            <!--<td>
+              <span>$#clusterclientnode['cifs_status']</span>
+              <dl class="opercommand">
+                $#if _(clusterclientnode['cifs_status']) == _('start'):
+                    <dd><a title="$#_('stop')" href="javascript:void(0);" onclick="clustert_client_node_cifs_status('stop','$#clusterclientnode['service_name']','$#clusterclientnode['node_name']')" class="ui-icon ui-icon-wrench ui-icon-pause">&nbsp;</a></dd>
+                $#if _(clusterclientnode['cifs_status']) == _('stop'):
+                    <dd><a title="$#_('start')" href="javascript:void(0);" onclick="clustert_client_node_cifs_status('start','$#clusterclientnode['service_name']','$#clusterclientnode['node_name']')" class="ui-icon ui-icon-wrench ui-icon-power">&nbsp;</a></dd>
+              </dl>
+            </td>-->
+            
+            <!--<td>
+              <span>$#clusterclientnode['nfs_status']</span>
+              <dl class="opercommand">
+                $#if _(clusterclientnode['nfs_status']) == _('start'):
+                    <dd><a title="$#_('stop')" href="javascript:void(0);" onclick="clustert_client_node_nfs_status('stop','$#clusterclientnode['service_name']','$#clusterclientnode['node_name']')" class="ui-icon ui-icon-wrench ui-icon-pause">&nbsp;</a></dd>
+                $#if _(clusterclientnode['nfs_status']) == _('stop'):
+                    <dd><a title="$#_('start')" href="javascript:void(0);" onclick="clustert_client_node_nfs_status('start','$#clusterclientnode['service_name']','$#clusterclientnode['node_name']')" class="ui-icon ui-icon-wrench ui-icon-power">&nbsp;</a></dd>
+              </dl>
+            </td>斯蒂芬-->
+            
+            <td>
+              <span>
+              $if _(clusterclientnode['status']) == '0':
+                  $_('stop')
+              $elif _(clusterclientnode['status']) == '1':
+                  $_('start')
+              $else:
+                  $_('error')
+              </span>
+              <dl class="opercommand">
+                $if _(clusterclientnode['status']) == '1':
+                    <dd><a title="$_('stop')" href="javascript:void(0);" onclick="cluster_client_node_status('stop','$clusterclientnode['service_name']','$clusterclientnode['node_name']')" class="ui-icon ui-icon-wrench ui-icon-pause">&nbsp;</a></dd>
+                $if _(clusterclientnode['status']) == '0':
+                    <dd><a title="$_('start')" href="javascript:void(0);" onclick="cluster_client_node_status('start','$clusterclientnode['service_name']','$clusterclientnode['node_name']')" class="ui-icon ui-icon-wrench ui-icon-power">&nbsp;</a></dd>
+              </dl>
+            </td>
+          </tr>
+  $else:
+      <tr>
+        <td><a href="javascript:void(0)" onClick="cluster_client_node_create()" style="font-weight:bold;color:#2E6E9E;">$_("cluster_client_node_create")</a></td>
+        <!--<td>&nbsp;</td>-->
+        <!--<td>&nbsp;</td>-->
+        <td>&nbsp;</td>
+      </tr>
+        
+</table>

@@ -1,0 +1,64 @@
+$def with (content)
+
+<style type="text/css">
+.ip_container{
+	margin-left:0;
+}
+</style>
+
+<!--服务名称-->
+<div style="display:none">
+  <label for="clusterservicename">$_("clusterservicename")</label>
+  <select name="clusterservicename" id="clusterservicename" class="ui-widget-content ui-corner-all"></select>
+  <br /><br />
+</div>
+
+<!--客户端节点-->
+<div>
+  <label>$_('cluster_client_node_ipaddr')</label>
+  <input type="text" id="clusternodeipaddr" name="clusternodeipaddr" />
+  <br /><br />
+</div>
+    
+
+<script type="text/javascript">
+$(ELT)(function(){
+    getService();//获取服务列表
+	$(ELT)('#clusternodeipaddr').ipaddress();
+});
+
+//获取服务列表
+function getService(){
+	checkSession();
+    var url = '/clusterservicextendservice?' + new Date().getTime();
+    $(ELT).ajax({
+        url: url,
+        type: 'POST',
+        beforeSend: function(){
+            $(ELT)('#clusterservicename').html('');
+            $(ELT)('#clusterservicename').append('<option class="ajaximg">$_("load data")</option>');
+        },
+        dataType: 'JSON',
+        success: function(text){
+            $(ELT)('#clusterservicename').html('');
+			if(text!='[]'){
+				var services = $(ELT).parseJSON(text);
+				for(var i = 0; i < services.length; i++){
+					var name=services[i].split('::');
+					if(name[0]==$(ELT)("#pop_val_service_name").val()){
+						$(ELT)('#clusterservicename').append('<option value="' + name[0] + '" selected>' + name[0] + '</option>' );
+					}else{
+						$(ELT)('#clusterservicename').append('<option value="' + name[0] + '">' + name[0] + '</option>' );
+					}
+				}
+            }else{
+				$(ELT)('#clusterservicename').html('<option value=0>$_("none")</option>');
+			}
+        },
+        error: function(){
+            custAlert("$_('opersucc')",'$_("noservicefound")');
+			$(ELT)("#pop_div_client_node_create").dialog("close");
+        }
+    });
+}
+</script>

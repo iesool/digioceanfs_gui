@@ -1,0 +1,75 @@
+$def with (content)
+
+<form id="formclusterservice" method="post">
+    <fieldset class="createdialog">
+        <div>
+            <label for="clusterservicename">$_("clusterservicename")</label>
+            <select name="clusterservicename" id="clusterservicename" class="ui-widget-content ui-corner-all" onchange="getServiceAfrInfo();">
+            </select><input type="hidden" id="name_afr" />&nbsp;&nbsp;&nbsp;<strong>$_('afr')</strong>&nbsp;<span id="service_afr">-</span><br /><br />
+        </div>
+        <div id="pcontent">
+        </div>
+        <label>&nbsp;</label>
+    </fieldset>
+</form>
+
+<script type="text/javascript">
+$(ELT)(document).ready(function(){
+    getService();
+});
+
+function getService(){
+	checkSession();
+    var url = '/clusterservicextendservice?' + new Date().getTime();
+    $(ELT).ajax({
+        url: url,
+        type: 'POST',
+        beforeSend: function(){
+            $(ELT)('#clusterservicename').html('');
+            $(ELT)('#clusterservicename').append('<option class="ajaximg">数据加载中...</option>');
+        },
+        dataType: 'JSON',
+        success: function(text){
+            $(ELT)('#clusterservicename').html('');
+			//$(ELT)('#clusterservicename').append("<option value='' selected=selected>$_('select')</option>");
+            var services = $(ELT).parseJSON(text);
+			$(ELT)('#name_afr').val(services.toString())
+            for(var i = 0; i < services.length; i++){
+				var name=services[i].split('::');
+				$(ELT)('#clusterservicename').append('<option value="' + name[0] + '">' + name[0] + '</option>' );
+                //$(ELT)('#clusterservicename').append('<option value="' + services[i] + '">' + services[i] + '</option>' );
+            }
+			custLoading("$_('Loading Data ...')");
+			clusternoderaidload();
+			getServiceAfrInfo();
+        },
+        error: function(){
+            alert('error');
+        }
+    });
+}
+
+function clusternoderaidload(){
+	var url = "/clusterserviceraidload_select?" + new Date().getTime();
+	$(ELT)("#pcontent").load(url,'',function(){
+		$(ELT)('#loaddialog').dialog('close');									 
+	});
+}
+
+function getServiceAfrInfo(){
+	var servicename = $(ELT)('#clusterservicename').val();
+	$(ELT)('#service_afr').html('-');
+	var afrs_arr=$(ELT)('#name_afr').val().split(',');
+	for(var i=0;i<afrs_arr.length;i++){
+		afr_arr=afrs_arr[i].split('::');
+		if(servicename==afr_arr[0]){
+			if(afr_arr[1]=='NaN'){
+				$(ELT)('#service_afr').html('-');
+			}else{
+				$(ELT)('#service_afr').html(afr_arr[1]);
+			}
+			break;
+		}
+	}
+}
+</script>

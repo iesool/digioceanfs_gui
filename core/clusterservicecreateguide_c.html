@@ -1,0 +1,88 @@
+$def with (content)
+
+
+<form id="formclusterservice" method="post">
+    <fieldset class="createdialog">
+        <div class="left">
+            <p>$_("clusterservicedevunused")</p><br />
+            <select id="clusterservicedevunused" name="clusterservicedevunused" style="height:150px;" class="ui-widget-content ui-corner-all" multiple="true">
+            </select>
+        </div>
+        <div class="center">
+            <ul>
+                <li><button id="diskadd">$_("add")</button></li>
+                <li><button id="diskremove">$_("remove")</button></li>
+                <li><button id="diskaddall">$_("addall")</button></li>
+                <li><button id="diskremoveall">$_("removeall")</button></li>
+            </ul>
+        </div>
+        <div class="right">
+            <p>$_("clusterservicedevselected")</p><br />
+            <select name="clusterservicedevselected" id="clusterservicedevselected" style="height:150px;" class="ui-widget-content ui-corner-all" multiple="true">
+            </select><br /><br />
+        </div>
+        <label>&nbsp;</label>
+    </fieldset>
+</form>
+
+<script type="text/javascript">
+function getServiceDisk(){
+	checkSession();
+    var url = '/clusterservicecreatedisk?' + new Date().getTime();
+    $(ELT).ajax({
+        url: url,
+        type: 'POST',
+        beforeSend: function(){
+            $(ELT)('#clusterservicedevunused').html('');
+            $(ELT)('#clusterservicedevunused').append('<option class="ajaximg">数据加载中...</option>');
+        },
+        dataType: 'JSON',
+        success: function(text){
+            $(ELT)('#clusterservicedevunused').html('');
+            var diskinfo = $(ELT).parseJSON(text);
+            if(diskinfo.length < 1){
+            	//$(ELT)('.ui-dialog').each(function(){$(ELT)(this).remove();});
+            	//custAlert('$_("operfail")','$_("nodeordisknotfound")');
+                $(ELT)('#clusterservicedevunused').append('<option class="static" value="$_('nounuseddisk')">$_('nounuseddisk')</option>');
+            }
+            for(var i = 0; i < diskinfo.length; i++){
+                $(ELT)('#clusterservicedevunused').append('<option value="'+ diskinfo[i].nodename + ':' + diskinfo[i].devname + '">' + diskinfo[i].nodename + ':' + diskinfo[i].devname + '</option>');
+            }
+        },
+        error: function(){
+            alert('error');
+        }
+    });
+}
+
+
+    $(ELT)(function(){
+    	getServiceDisk();
+        $(ELT)("#clusterservicedevselected").dblclick(function() {$(ELT).listtolist("clusterservicedevselected","clusterservicedevunused","move",false);});
+        $(ELT)("#clusterservicedevunused").dblclick(function() {$(ELT).listtolist("clusterservicedevunused","clusterservicedevselected","move",false);});
+        $(ELT)("#diskadd").button({
+            text: false,
+            icons: {
+                primary: "ui-icon-triangle-1-e"
+            }
+        }).bind("click",function() {$(ELT).listtolist("clusterservicedevunused","clusterservicedevselected","move",false);return false;});
+        $(ELT)("#diskremove").button({
+            text: false,
+            icons: {
+                primary: "ui-icon-triangle-1-w"
+            }
+        }).bind("click",function() {$(ELT).listtolist("clusterservicedevselected","clusterservicedevunused","move",false);return false;});
+        $(ELT)("#diskaddall").button({
+            text: false,
+            icons: {
+                primary: "ui-icon-seek-next"
+            }
+        }).bind("click",function() {$(ELT).listtolist("clusterservicedevunused","clusterservicedevselected","move",true);return false;});
+        $(ELT)("#diskremoveall").button({
+            text: false,
+            icons: {
+                primary: "ui-icon-seek-prev"
+            }
+        }).bind("click",function() {$(ELT).listtolist("clusterservicedevselected","clusterservicedevunused","move",true);return false;});
+    });
+</script>

@@ -1,0 +1,290 @@
+$def with (content)
+
+<div id="toolbar" class="ui-corner-all">
+    <button id="btnclusternodecreate">$_("clusternodecreate")</button>
+    <!--<button id="btnclusternodereplace">$_("clusternodereplace")</button>-->
+</div>
+
+<div id="pcontent">
+
+</div>
+<script type="text/javascript">
+    $(ELT)(function(){
+        $(ELT)('#btnclusternodecreate').button({
+            icons: {
+                primary: 'ui-icon-plusthick'
+            }
+        }).bind('click',clusternodecreate);
+        $(ELT)('#btnclusternodereplace').button({
+            icons: {
+                primary: 'ui-icon-gear'
+            }
+        }).bind('click',clusternodereplace);
+        clusternodeload();
+    });
+    function clusternodeload(){
+        var url = "/clusternodeload?" + new Date().getTime();
+        checkSession();
+        $(ELT).ajax({
+            url: url,
+            data: '',
+            dataType: 'html',
+            beforeSend: function(){
+                custLoading("$_('Loading Data ...')");
+            },
+            success: function(text){
+                $(ELT)('#loaddialog').dialog('close');
+                $(ELT)('#pcontent').html(text);
+            }
+        });
+    }
+    function clusternodecreate(){
+		custLoading("$_('Loading Data ...')");
+        var url = "/clusternodecreate?" + new Date().getTime();
+        checkSession();
+        var cnodedialog = $(ELT)('<div id="cnodedialog" title="$_('clusternodecreate')">').appendTo('body');
+        cnodedialog.load(
+            url, 
+            '',
+            function (responseText, textStatus, XMLHttpRequest) {
+				$(ELT)('#loaddialog').dialog('close');
+                cnodedialog.dialog({
+                    bgiframe: true,
+                    autoOpen: true,
+                    width: 340,
+                    modal: true,
+                    resizable: false,
+                    buttons: {
+                        "$_('cancel')": function() {
+                            $(ELT)(this).dialog('close');
+                        },
+                        "$_('create')": function() {
+                            if(!$(ELT)('#formclusternode').valid()){
+                                return false;
+                            }
+                            var data = $(ELT)('#formclusternode').serialize();
+                            var ipaddr = $(ELT)('#clusternodeipaddr').val();
+                            if(ipaddr == ''){
+                                custAlert("$_('operfail')","$_('fillupclusternodeipaddr')");
+                                $(ELT)(this).dialog('close');
+                            }
+                            else{
+                                $(ELT).ajax({
+                                    url: url,
+                                    type: 'POST',
+                                    data: data,
+                                    dataType: 'text',
+                                    beforeSend: function(){
+                                        custLoading("$_('creatingnodenow')");
+                                    },
+                                    error: function(){
+                                        custAlert("$_('operfail')","Request Error!");
+                                    },
+                                    success: function(text){
+                                        if(isNaN(text)){
+                                            $(ELT)('#loaddialog').dialog('close');
+                                            custAlert("$_('operfail')",text);
+                                        }
+                                        else{
+                                            if(parseInt(text) == 0){
+                                                clusternodeload();
+                                                $(ELT)('#loaddialog').dialog('close');
+                                                custAlert("$_('opersucc')","$_('clusternodecreatesucc')");
+                                            }else{
+                                                $(ELT)('#loaddialog').dialog('close');
+                                                custAlert("$_('operfail')","$_('operfailinfo')");
+                                            }
+                                        }
+                                    }
+                                });
+                                $(ELT)(this).dialog('close');
+                            }
+                        }
+                    },
+                    close: function(){
+                        cnodedialog.remove();
+                    }
+                });
+            }
+        );
+    }
+    function clusternodereplace(){
+		custLoading("$_('Loading Data ...')");
+        var url = "/clusternodereplace?" + new Date().getTime();
+        checkSession();
+        var rnodedialog = $(ELT)('<div id="rnodedialog" title="$_('clusternodereplace')">').appendTo('body');
+        rnodedialog.load(
+            url, 
+            '',
+            function (responseText, textStatus, XMLHttpRequest) {
+				$(ELT)('#loaddialog').dialog('close');
+                rnodedialog.dialog({
+                    bgiframe: true,
+                    autoOpen: true,
+                    width: 340,
+                    modal: true,
+                    resizable: false,
+                    buttons: {
+                        "$_('cancel')": function() {
+                            $(ELT)(this).dialog('close');
+                        },
+                        "$_('replace')": function() {
+                            var data = $(ELT)('#formclusternode').serialize();
+                            var ipaddr = $(ELT)('#clusternodenew').val();
+                            if(ipaddr == ''){
+                                custAlert("$_('operfail')","$_('fillupclusternodeipaddr')");
+                                $(ELT)(this).dialog('close');
+                            }
+                            else{
+                                rnodedialog.dialog('close');
+                                custWarning("$_('confirmoper')","$_('clusternodereplaceconfirm')",'',function(){
+                                    $(ELT).ajax({
+                                        url: url,
+                                        type: 'POST',
+                                        data: data,
+                                        dataType: 'text',
+                                        beforeSend: function(){
+                                            custLoading("$_('replacingnodenow')");
+                                        },
+                                        error: function(){
+                                            custAlert("$_('operfail')","Request Error!");
+                                        },
+                                        success: function(text){
+                                            if(isNaN(text)){
+                                                $(ELT)('#loaddialog').dialog('close');
+                                                custAlert("$_('operfail')",text);
+                                            }
+                                            else{
+                                                if(parseInt(text) == 0){
+                                                    clusternodeload();
+                                                    $(ELT)('#loaddialog').dialog('close');
+                                                    custAlert("$_('opersucc')","$_('clusternodereplacesucc')");
+                                                }else{
+                                                    custAlert("$_('operfail')","$_('operfailinfo')");
+                                                }
+                                            }
+                                        }
+                                    });
+                                    $(ELT)(this).dialog('close');
+                                });
+                            }
+                        }
+                    },
+                    close: function(){
+                        rnodedialog.remove();
+                    }
+                });
+            }
+        );
+    }
+    function clusternodedeletesingle(clusternodeipaddr){
+        var url = '/clusternodedeletesingle?' + new Date().getTime();
+        checkSession();
+		if(window.location.toString().match(/(?:\d+\.){3}(?:\d+)/)==$(ELT)("#nodeip_"+clusternodeipaddr).html()&&$(ELT)("#cluternodes tbody tr").length>1){
+			custAlert("$_('operfail')","请先删本机外的其他节点！");
+			return false;
+		}
+        var buttons = {
+            "$_('cancel')": function() {
+                $(ELT)(this).dialog('close');
+            },
+            "$_('delete')": function() {
+                $(ELT)(this).dialog('close');
+                checkSession();
+                $(ELT).ajax({
+                    url: url,
+                    type: 'POST',
+                    data: 'clusternodeipaddr=' + clusternodeipaddr,
+                    dataType: 'text',
+                    beforeSend: function(){
+                        custLoading("$_('deletingnodenow')");
+                    },
+                    error: function(){
+                        custAlert("$_('operfail')","Request Error!");
+                    },
+                    success: function(text){
+                        if(isNaN(text)){
+                            $(ELT)('#loaddialog').dialog('close');
+                            custAlert("$_('operfail')",text);
+                        }
+                        else{
+                            if(parseInt(text) == 0){
+                                clusternodeload();
+                                $(ELT)('#loaddialog').dialog('close');
+                                custAlert("$_('opersucc')","$_('clusternodedeletesucc')");
+                            }else{
+                                custAlert("$_('operfail')","$_('operfailinfo')");
+                            }
+                        }
+                    }
+                });
+            }
+        };
+        custwarning("$_('confirmoper')","$_('clusternodedeleteconfirm')",buttons);
+    }
+    
+    function clusternodecifsrestart(clusternodename){
+    	var url = "/clusternodecifsrestart?" + new Date().getTime();
+    	checkSession();
+    	$(ELT).ajax({
+                url: url,
+                type: 'POST',
+                data: 'clusternodename=' + clusternodename,
+                dataType: 'text',
+                beforeSend: function(){
+                    custLoading("$_('restartingcifsnow')");
+                },
+                error: function(){
+                    custAlert("$_('operfail')","Request Error!");
+                },
+                success: function(text){
+                    if(isNaN(text)){
+                        $(ELT)('#loaddialog').dialog('close');
+                        custAlert("$_('operfail')",text);
+                    }
+                    else{
+                        if(parseInt(text) == 0){
+                            clusternodeload();
+                            $(ELT)('#loaddialog').dialog('close');
+                            custAlert("$_('opersucc')","$_('clusternodecifsrestartsucc')");
+                        }
+                        else{
+                            custAlert("$_('operfail')","$_('operfailinfo')");
+                        }
+                    }
+                }
+            });
+    }
+    function clusternodenfsrestart(clusternodename){
+    	var url = "/clusternodenfsrestart?" + new Date().getTime();
+    	checkSession();
+    	$(ELT).ajax({
+                url: url,
+                type: 'POST',
+                data: 'clusternodename=' + clusternodename,
+                dataType: 'text',
+                beforeSend: function(){
+                    custLoading("$_('restartingnfsnow')");
+                },
+                error: function(){
+                    custAlert("$_('operfail')","Request Error!");
+                },
+                success: function(text){
+                    if(isNaN(text)){
+                        $(ELT)('#loaddialog').dialog('close');
+                        custAlert("$_('operfail')",text);
+                    }
+                    else{
+                        if(parseInt(text) == 0){
+                            clusternodeload();
+                            $(ELT)('#loaddialog').dialog('close');
+                            custAlert("$_('opersucc')","$_('clusternodenfsrestartsucc')");
+                        }
+                        else{
+                            custAlert("$_('operfail')","$_('operfailinfo')");
+                        }
+                    }
+                }
+            });
+    }
+</script>

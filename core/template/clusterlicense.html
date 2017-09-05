@@ -1,0 +1,107 @@
+$def with (content)
+
+<div id="content">
+    <div id="productype">
+        <label for="deviceid">$_("productype"):</label>
+        <div id="ptype" name="ptype">&nbsp</div>
+    </div>
+    <div id="productserialnum">
+        <label for="pserial">$_("productserialnum"):</label>
+        <div id="pserial" name="pserial">&nbsp</div>
+    </div>
+    <div id="softwareversion">
+        <label for="sversion">$_("softwareversion"):</label>
+        <div id="sversion" name="sversion">&nbsp</div>
+    </div>
+    <div id="licnodename">
+        <label for="nodelist">$_("nodename"):</label>
+        <select id="nodelist" name="nodelist" onchange="getDeviceId();">
+        </select> 
+    </div>
+    <div id="licdeviceid">
+        <label for="deviceid">$_("deviceid"):</label>
+        <input id="deviceid" name="deviceid" type="text" value="" size="30" readonly />
+    </div>
+    <div id="liclicense">
+        <label for="license">$_("license"):</label>
+        <input id="license" name="license" type="text" value="" size="30" />
+        <input type="button" value="$_('create')" onclick="checkLicense();" />
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(ELT)(function(){
+        getNodeList();
+    });
+    function getNodeList(){
+        url = "/clustergetnodelist?" + new Date().getTime();
+        //checkSession();
+		$(ELT).ajax({
+			url: url,
+			data: '',
+			dataType: 'JSON',
+			type: 'POST',
+			beforeSend: function(){},
+			success: function(text){
+				nodelist = $(ELT).parseJSON(text);
+				var options_html = '';
+				for(var i = 0; i < nodelist.length; i++){
+					option_html = '<option value="' + nodelist[i].nodename + '">' + nodelist[i].nodename + '</option>';
+					options_html += option_html;
+				}
+				$(ELT)('#nodelist').html(options_html);
+			},
+			complete: function(){
+				getDeviceId();
+			}
+		});
+    }
+    function getDeviceId(){
+        var url = "/clustergetdeviceid?" + new Date().getTime();
+        var nodename = '';
+        checkSession();
+        $(ELT).ajax({
+            url: url,
+            data: 'nodename=' + nodename,
+            dataType: 'text',
+            type: 'POST',
+            beforeSend: function(){},
+            success: function(text){
+                if(text != ''){
+                    $(ELT)("#deviceid").val(text);
+                }
+                else{
+                    $(ELT)("#deviceid").val("device id not found!");
+                }
+            }
+        });
+    }
+    function checkLicense(){
+        var url = '/clusterchecklicense?' + new Date().getTime();
+        var nodename = $(ELT)("#nodelist").val();
+        var license = $(ELT)("#license").val();
+        checkSession();
+        $(ELT).ajax({
+            url: url,
+            data: 'nodename=' + nodename + '&license=' + license,
+            type: 'POST',
+            dataType: 'text',
+            beforeSend: function(){},
+            success: function(text){
+                    if(isNaN(text)){
+                        $(ELT)('#loaddialog').dialog('close');
+                        custAlert("$_('operfail')",text);
+                    }
+                    else{
+                        if(parseInt(text) == 0){
+                            $(ELT)('#loaddialog').dialog('close');
+                            custAlert("$_('opersucc')","$_('clusternodechecklicensesucc')");
+                        }
+                        else{
+                            custAlert("$_('operfail')","$_('operfailinfo')");
+                        }
+                    }
+            }
+        });
+    }
+</script>

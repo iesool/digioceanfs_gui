@@ -1,0 +1,150 @@
+$def with (content)
+
+<form id="formclusterservice_b" method="post">
+    <fieldset class="createdialog">
+        <p>$_("clusterservicelocalpro"):</p>
+        <ul id="servicelocalpor">
+            <li>
+                <label for="clusterservicelocalpor_no">$_("no"):</label>
+                <input type="radio" id="clusterservicelocalpor_no" name="clusterservicelocalpor" checked onchange="getOthersOff(this);"/>
+            </li>
+            <li>
+                <label for="clusterservicelocalpor_yes">$_("yes"):</label>
+                <input type="radio" id="clusterservicelocalpor_yes" name="clusterservicelocalpor" onchange="getOthersOff(this);"/>
+            </li>
+        </ul>
+        <p>$_("clusterservicetype"):</p>
+        <ul id="serviceraidlv">
+            <li>
+                <label for="clusterservicetype_default">$_("default"):</label>
+                <input type="radio" id="clusterservicetype_default" name="clusterservicetype" checked onchange="getOthersOff(this);"/>
+            </li>
+            <li>
+                <label for="clusterservicetype_afr">$_("afr"):</label>
+                <input type="radio" id="clusterservicetype_afr" name="clusterservicetype" onchange="getOthersOff(this);"/>
+            </li>
+            <!--li>
+                <label for="clusterservicetype_strip">$_("strip"):</label>
+                <input type="checkbox" id="clusterservicetype_strip" name="clusterservicetype"/>
+            </li-->
+        </ul><br />
+        <div id="afr_type" style="display:none;">
+        <table>
+            <tr>
+                <td><label for="clusterserviceafrnum">$_("redundancy"):</label></td>
+                <td><input type="text" size="5" id="clusterserviceafrnum" name="clusterserviceafrnum" /></td>
+            </tr>
+            <!--tr>
+            <td><label>$_("istrip"):</label></td>
+            <td>
+                <label for="clusterservicetype_is_strip">$_("yes"):</label>
+                <input type="radio" id="clusterservicetype_strip_yes" name="clusterservicetype_is_strip" />
+                <label for="clusterservicetype_strip_no">$_("no"):</label>
+                <input type="radio" id="clusterservicetype_strip_no" name="clusterservicetype_is_strip" checked/>
+            </td>
+            </tr-->
+            <tr id="stripnum" style="display:none;">
+                <td><label for="clusterserviceafr_stripnum">$_("stripnum"):</label></td>
+                <td><input type="text" id="clusterserviceafr_stripnum" name="clusterservicestripnum" size="5"/></td>
+            </tr>
+        </table>
+        </div>
+        <div id="strip_type" style="display:none;">
+        <table>
+            <tr>
+                <td><label for="clusterservicestrip_stripnum">$_("stripnum"):</label></td>
+                <td><input type="text" id="clusterservicestrip_stripnum" name="clusterservicestripnum" size="5"/></td>
+            </tr>
+            <tr>
+            <td><label>$_("isafr"):</label></td>
+            <td>
+                <label for="clusterservicetype_is_afr">$_("yes"):</label>
+                <input type="radio" id="clusterservicetype_afr_yes" name="clusterservicetype_is_afr" />
+                <label for="clusterservicetype_afr_no">$_("no"):</label>
+                <input type="radio" id="clusterservicetype_afr_no" name="clusterservicetype_is_afr" checked/>
+            </td>
+            </tr>
+            <tr id="afrnum" style="display:none;">
+                <td><label for="clusterservicestrip_afrnum">$_("redundancy"):</label></td>
+                <td><input type="text" id="clusterservicestrip_afrnum" name="clusterservicestripnum" /></td>
+            </tr>
+        </table>
+        </div>
+        <label>&nbsp;</label>
+    </fieldset>
+</form>
+
+<script type="text/javascript">
+$(ELT)(function(){
+    $(ELT)('#clusterservicetype_afr').live('click',function(){ 
+        if($(ELT)('#clusterservicetype_afr').attr('checked')){
+        $(ELT)('#afr_type').hide().fadeIn('slide', function(){
+            $(ELT)('#formclusterservice_b').validate({
+                errorClass: "invalid",
+                rules: {
+                    clusterserviceafrnum: {
+                        required: true,
+                        number: true,
+                        min: 2
+                    }
+                },
+                messages: {
+                    clusterserviceafrnum: {
+                        required: '$_("redundancy must not be none")',
+                        number: '$_("redundancy must be int")',
+                        min: '$_("redundancy must not less than 2")'
+                    } 
+                }
+            });
+//This section used for open hidded afr div
+        });
+            $(ELT)('#strip_type').hide().fadeOut('slide');
+            $(ELT)('#clusterservicetype_default').attr('checked','');
+            $(ELT)('#clusterservicetype_strip').attr('checked','');
+        }
+        else{
+            $(ELT)('#afr_type').hide().fadeOut('slide');
+        }
+    });
+//This section used for open hidded strip div
+    $(ELT)('#clusterservicetype_strip').live('click',function(){ 
+        if($(ELT)('#clusterservicetype_strip').attr('checked')){
+            $(ELT)('#strip_type').hide().fadeIn('slide');
+            $(ELT)('#afr_type').hide().fadeOut('slide');
+            $(ELT)('#clusterservicetype_default').attr('checked','');
+            $(ELT)('#clusterservicetype_afr').attr('checked','');
+        }
+        else{
+            $(ELT)('#strip_type').hide().fadeOut('slide');
+        }
+    });
+    $(ELT)('#clusterservicetype_afr_yes').live('click', function(){
+        $(ELT)('#afrnum').hide().fadeIn('slide');
+    });   
+    $(ELT)('#clusterservicetype_afr_no').live('click', function(){
+        $(ELT)('#afrnum').hide().fadeOut('slide');
+    });   
+//    $(ELT)('#clusterservicetype_strip_yes').live('click', function(){
+//        $(ELT)('#stripnum').hide().fadeIn('slide');
+//    });   
+    $(ELT)('#clusterservicetype_strip_no').live('click', function(){
+        $(ELT)('#stripnum').hide().fadeOut('slide');
+    });
+});
+    function getOthersOff(obj){
+        var objname = $(ELT)(obj).attr('name');
+        var objarr = $(ELT)('input[type=checkbox][name='+ objname + ']');
+        for(i=0; i < objarr.length; i++){
+	    objarr[i].checked = false;
+        }
+        obj.checked = true;
+        if($(ELT)(obj).attr('id') == 'clusterservicetype_default'){
+	    $(ELT)('#afr_type').hide().fadeOut('slide');
+	}
+        //$(ELT)('#clusterservicetype_afr').attr('checked','');
+        //$(ELT)('#afr_type').hide().fadeOut('slide');
+        //$(ELT)('#clusterservicetype_strip').attr('checked','');
+        //$(ELT)('#strip_type').hide().fadeOut('slide');
+    }
+</script>
+

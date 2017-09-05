@@ -1,0 +1,95 @@
+$def with (content)
+
+<form id="formclusterreplacenodisk" method="post">
+    <fieldset class="createdialog">
+        <div class="left">
+            <p>$_("clusternodediskunused")</p><br />
+            <select id="clusternodediskunused" name="clusternodediskunused" style="height:150px;" class="ui-widget-content ui-corner-all" multiple="true">
+                $if content.clusternodediskunused:
+                    $for disk in content.clusternodediskunused:
+                        <option value="$disk">$disk</option>
+                $else:
+                    <option class="static" value="$_('nounuseddisk')">$_("nounuseddisk")</option>
+            </select>
+        </div>
+        <div class="center">    
+            <ul>
+                <li><button id="raidadd">$_("add")</button></li>
+                <li><button id="raidmove">$_("remove")</button></li>
+                <li><button id="raidaddall">$_("addall")</button></li>
+                <li><button id="raidremoveall">$_("removeall")</button></li>
+            </ul>
+        </div>
+        <div class="right">
+            <p>$_("clusternodediskselected")</p><br />
+            <select name="clusterreplacedisk" id="clusterreplacedisk" style="height:150px;" class="ui-widget-content ui-corner-all" multiple="true">
+            </select><br /><br />
+        </div>
+        <div>
+            <label for="clusterservicename">$_("clusterservicename")</label>
+            <select name="clusterservicename" id="clusterservicename" onchange="getservicenodiskinfo();">
+                $if content.clusterwarnservice:
+                    $for servicename in content.clusterwarnservice:
+                        <option value="$servicename">$servicename</option>
+                $else:
+                    <option class="static" value="">$_("nowarnservice")</option>
+            </select><br /></br />
+            <label>&nbsp;</label>
+            <dd style="color:#FF0000;font-weight:bold;"><span id="tipinfo">$_('serviceneedreplacedisknum')</span>&nbsp;<span id="nodisknum"></span></dd>
+        </div>
+        <label>&nbsp;</label>
+    </fieldset>
+</form>
+<script type="text/javascript">
+    $(ELT)(function(){
+        getservicenodiskinfo();
+        $(ELT)("#clusterreplacedisk").dblclick(function() {$(ELT).listtolist("clusterreplacedisk","clusternodediskunused","move",false);});
+        $(ELT)("#clusternodediskunused").dblclick(function() {$(ELT).listtolist("clusternodediskunused","clusterreplacedisk","move",false);});
+        $(ELT)("#raidadd").button({
+            text: false,
+            icons: {
+                primary: "ui-icon-triangle-1-e"
+            }
+        }).bind("click",function() {$(ELT).listtolist("clusternodediskunused","clusterreplacedisk","move",false);return false;});
+        $(ELT)("#raidmove").button({
+            text: false, icons: { primary: "ui-icon-triangle-1-w" }
+        }).bind("click",function() {$(ELT).listtolist("clusterreplacedisk","clusternodediskunused","move",false);return false;});
+        $(ELT)("#raidaddall").button({
+            text: false,
+            icons: {
+                primary: "ui-icon-seek-next"
+            }
+        }).bind("click",function() {$(ELT).listtolist("clusternodediskunused","clusterreplacedisk","move",true);return false;});
+        $(ELT)("#raidremoveall").button({
+            text: false,
+            icons: {
+                primary: "ui-icon-seek-prev"
+            }
+        }).bind("click",function() {$(ELT).listtolist("clusterreplacedisk","clusternodediskunused","move",true);return false;});
+    });
+    function getservicenodiskinfo(){
+        servicename = $(ELT)('#clusterservicename').val();
+        if(servicename == ''){
+            $(ELT)('#tipinfo').text('');
+            return false;
+        }
+        var url = '/clusternodegetservicenodiskinfo?' + new Date().getTime();
+        var dataobj = {
+            'servicename':servicename
+        };
+        var data = $(ELT).param(dataobj);
+        $ELT .ajax({
+            url: url,
+            type: 'GET',
+            data: data,
+            dataType: 'text',
+            error: function(){
+                custAlert("$_('failinfo')","Request Error!");
+            },
+            success: function(text){
+                $(ELT)('#nodisknum').text(text);
+            }
+        });
+    }
+
+</script>

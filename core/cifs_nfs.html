@@ -1,0 +1,44 @@
+                    
+                        $if _(clusterservice['status']) == 'Started':
+                        	$if  _(clusterservice['raidlv']) == 'Replicate' or _(clusterservice['raidlv']) == 'Distributed-Replicate' or _(clusterservice['raidlv'])=='Striped-Replicate':
+                                <span class="opertext"><a href="/clusterserviceview?service=$clusterservice['servicename']">$clusterservice["servicename"]</a></span>
+                            $else:
+                                <span class="opertext">$clusterservice["servicename"]</span>
+                        $else:
+                            <span class="opertext">$clusterservice["servicename"]</span>
+
+                    <!--ศ฿ำเ-->
+                    <td>
+                        $if _(clusterservice['afr'])=='NaN':
+                            -
+                         $else:
+                            $_(clusterservice["afr"])
+                    </td>
+  
+                    <!--cifs-->
+                    <td class="cifs">
+                        <span id="$clusterservice['servicename']cifs_status" class="opertext cifs_status" onmouseover="getCifsStatus('cifs','$_(clusterservice['servicename'])');">$_(clusterservice['cifs_status'])</span>
+                        <dl id="$clusterservice['servicename']option" class="opercommand">
+                            <dd><a title="$_('manage')" href="javascript:void(0);" onclick="clusterservicecifsmanage('$clusterservice["servicename"]');" class="ui-icon ui-icon-wrench ui-icon-inline">&nbsp</a></dd>
+                        $if _(clusterservice['cifs_status']) == _('start'):
+                            <dd><a title="$_('stop')" style="margin-top:4px;" href="javascript:void(0);" onclick="javascript:clusterservicecifs_status('stop','$clusterservice['servicename']','$clusterservice["status"]');" class="ui-icon ui-icon-wrench ui-icon-pause">&nbsp</a></dd>
+                        $if _(clusterservice['cifs_status']) == _('stop'):
+                            <dd><a title="$_('start')" style="margin-top:4px;" href="javascript:void(0);" onclick="javascript:clusterservicecifs_status('start','$clusterservice['servicename']','$clusterservice["status"]');" class="ui-icon ui-icon-wrench ui-icon-power">&nbsp</a></dd>
+                        $if _(clusterservice['cifs_status']) == _('Warnning'):
+                        	<dd><a title="$_('start')" style="margin-top:4px;" href="javascript:void(0);" onclick="javascript:clusterservicecifs_status('start','$clusterservice['servicename']','$clusterservice["status"]');" class="ui-icon ui-icon-wrench ui-icon-power">&nbsp</a></dd>
+                        </dl>
+                    </td>
+                    
+                    <!--nfs-->
+                    <td class="nfs">
+                        <span id="$clusterservice['servicename']nfs_status" class="opertext nfs_status" onmouseover="getNfsStatus('nfs','$_(clusterservice['servicename'])');">$_(clusterservice['nfs_status'])</span>
+                        <dl id="$clusterservice['servicename']option" class="opercommand">
+                            <dd><a title="$_('manage')" href="javascript:void(0);"  onclick="clusterservicenfsmanage('$clusterservice["servicename"]');" class="ui-icon ui-icon-wrench ui-icon-inline">&nbsp</a></dd>
+                        $if _(clusterservice['nfs_status']) == _('start'):
+                            <dd><a title="$_('stop')" style="margin-top:4px;" href="javascript:void(0);" onclick="javascript:clusterservicenfs_status('stop','$clusterservice['servicename']','$clusterservice["status"]');" class="ui-icon ui-icon-wrench ui-icon-pause">&nbsp</a></dd>
+                        $if _(clusterservice['nfs_status']) == _('stop'):    
+                            <dd><a title="$_('start')" style="margin-top:4px;" href="javascript:void(0);" onclick="javascript:clusterservicenfs_status('start','$clusterservice['servicename']','$clusterservice["status"]');" class="ui-icon ui-icon-wrench ui-icon-power">&nbsp</a></dd>
+                        $if _(clusterservice['nfs_status']) == _('Warnning'):
+                        	<dd><a title="$_('start')" style="margin-top:4px;" href="javascript:void(0);" onclick="javascript:clusterservicenfs_status('start','$clusterservice['servicename']','$clusterservice["status"]');" class="ui-icon ui-icon-wrench ui-icon-power">&nbsp</a></dd>
+                        </dl>
+                    </td>

@@ -1,0 +1,69 @@
+$def with (content)
+
+<form id="formclusterraidset_hs" method="post">
+    <fieldset>
+        <div style="float:left;margin-left:20px;">
+            <p>$_("clusternodediskunused")</p><br />
+            <select id="clusternodediskunused" name="clusternodediskunused" style="height:150px;" class="ui-widget-content ui-corner-all" multiple="true">
+                $if content.clusternodediskunused:
+                    $for disk in content.clusternodediskunused:
+                        <option value="$disk">$disk</option>
+                $else:
+                        <option class="static" value="$_('nounuseddisk')">$_("nounuseddisk")</option>
+            </select>
+        </div>
+        <div style="float:left;height:35px;line-height:35px;margin:0 20px;margin-top:40px;">    
+            <ul>
+                <li><button id="nodeadd">$_("add")</button></li>
+                <li><button id="noderemove">$_("remove")</button></li>
+                <li><button id="nodeaddall">$_("addall")</button></li>
+                <li><button id="noderemoveall">$_("removeall")</button></li>
+            </ul>
+        </div>
+        <div style="margin:0 20px;">
+            <p>$_("clusternodediskselected")</p><br />
+            <select name="clusternewraiddev_hs" id="clusternewraiddev_hs" style="height:150px;" class="ui-widget-content ui-corner-all" multiple="true">
+            </select><br /><br />
+        </div>
+        <div>
+            <label for="clusterraidlv">$_("clusterraidname")</label>
+            <select name="clusterraidname" id="clusterraidname">
+                $if not content.clusternoderaid:
+                    <option>$_("noraid")</option>
+                $else:
+                    $for raid in content.clusternoderaid:
+                        <option>$raid</option>
+            </select>
+        <label>&nbsp;</label>
+    </fieldset>
+</form>
+<script type="text/javascript">
+    $(ELT)(function(){
+        $(ELT)("#clusternewraiddev_hs").dblclick(function() {$(ELT).listtolist("clusternewraiddev_hs","clusternodediskunused","move",false);});
+        $(ELT)("#clusternodediskunused").dblclick(function() {$(ELT).listtolist("clusternodediskunused","clusternewraiddev_hs","move",false);});
+        $(ELT)("#nodeadd").button({
+            text: false,
+            icons: {
+                primary: "ui-icon-triangle-1-e"
+            }
+        }).bind("click",function() {$(ELT).listtolist("clusternodediskunused","clusternewraiddev_hs","move",false);return false;});
+        $(ELT)("#noderemove").button({
+            text: false,
+            icons: {
+                primary: "ui-icon-triangle-1-w"
+            }
+        }).bind("click",function() {$(ELT).listtolist("clusternewraiddev_hs","clusternodediskunused","move",false);return false;});
+        $(ELT)("#nodeaddall").button({
+            text: false,
+            icons: {
+                primary: "ui-icon-seek-next"
+            }
+        }).bind("click",function() {$(ELT).listtolist("clusternodediskunused","clusternewraiddev_hs","move",true);return false;});
+        $(ELT)("#noderemoveall").button({
+            text: false,
+            icons: {
+                primary: "ui-icon-seek-prev"
+            }
+        }).bind("click",function() {$(ELT).listtolist("clusternewraiddev_hs","clusternodediskunused","move",true);return false;});
+    });
+</script>

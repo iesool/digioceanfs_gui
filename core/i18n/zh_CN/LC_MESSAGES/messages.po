@@ -1,0 +1,2049 @@
+#-------------------------------operation message---------------------------------------
+msgid "clustersetmanagersucc"
+msgstr "设置管理端成功"
+
+msgid "clustersetmanagerwarning"
+msgstr "管理端未设置，现在设置？"
+
+msgid "clusterfirstlogin"
+msgstr "首次登录必须修改密码！"
+
+msgid "Setting manager now ..."
+msgstr "正在设置管理端 ..."
+
+msgid "Reloading now ..."
+msgstr "页面跳转中 ..."
+
+msgid "logintomanage"
+msgstr "管理界面登录"
+
+msgid "login"
+msgstr "登录"
+
+msgid "session expired"
+msgstr "登录超时，请重新登录"
+
+msgid "logout"
+msgstr "退出"
+
+msgid "admin"
+msgstr "管理员"
+
+msgid "Home"
+msgstr "首页"
+
+msgid "language"
+msgstr "语言"
+
+msgid "username"
+msgstr "用户名"
+
+msgid "password"
+msgstr "密码"
+
+msgid "repassword"
+msgstr "重复密码"
+
+msgid "userip"
+msgstr "用户IP地址"
+
+msgid "userinfo"
+msgstr "用户信息"
+
+msgid "remember"
+msgstr "记住密码"
+
+msgid "next"
+msgstr "下一步"
+
+msgid "back"
+msgstr "上一步"
+
+msgid "open"
+msgstr "打开"
+
+msgid "close"
+msgstr "关闭"
+
+msgid "auto"
+msgstr "自动"
+
+msgid "manul"
+msgstr "手动"
+
+msgid "create"
+msgstr "创建"
+
+msgid "save"
+msgstr "保存"
+
+msgid "replace"
+msgstr "替换"
+
+msgid "confirm"
+msgstr "确定"
+
+msgid "cancel"
+msgstr "取消"
+
+msgid "none"
+msgstr "暂无"
+
+msgid "update"
+msgstr "更新"
+
+msgid "edit"
+msgstr "编辑"
+
+msgid "detail"
+msgstr "详细"
+
+msgid "delete"
+msgstr "删除"
+
+msgid "remove"
+msgstr "移除"
+
+msgid "removeall"
+msgstr "移除所有"
+
+msgid "add"
+msgstr "添加"
+
+msgid "addall"
+msgstr "添加所有"
+
+msgid "used"
+msgstr "使用中"
+
+msgid "unused"
+msgstr "未使用"
+
+
+msgid "in_raid"
+msgstr "RAID中"
+
+msgid "in_service"
+msgstr "服务中"
+
+msgid "raid_service"
+msgstr "服务中RAID"
+
+msgid "hot_spare"
+msgstr "热备盘"
+
+msgid "failed"
+msgstr "损坏"
+
+
+msgid "select"
+msgstr "请选择"
+
+msgid "disks"
+msgstr "块硬盘"
+
+msgid "normal"
+msgstr "普通"
+
+msgid "raid_broken"
+msgstr "RAID损坏"
+
+msgid "activation"
+msgstr "激活"
+
+msgid "inactive"
+msgstr "未激活"
+
+msgid "clear_raidinfo"
+msgstr "激活磁盘"
+
+msgid "format_raidinfo"
+msgstr "格式化磁盘"
+
+msgid "reset_raidinfo"
+msgstr "重置磁盘"
+
+msgid "started"
+msgstr "已启动"
+
+msgid "restart"
+msgstr "重新启动"
+
+msgid "manage"
+msgstr "管理"
+
+msgid "start"
+msgstr "启动"
+
+msgid "extend"
+msgstr "扩容"
+
+msgid "stoped"
+msgstr "已停止"
+
+msgid "stop"
+msgstr "停止"
+
+msgid "destroy"
+msgstr "删除"
+
+msgid "fix"
+msgstr "修复"
+
+msgid "default"
+msgstr "默认"
+
+msgid "afr"
+msgstr "冗余"
+
+msgid "strip"
+msgstr "分片"
+
+msgid "Loading Data ..."
+msgstr "正在加载数据..."
+
+msgid "timeout"
+msgstr "请求超时"
+
+msgid "Warnning"
+msgstr "警告"
+
+msgid "opersucc"
+msgstr "操作成功！"
+
+msgid "operwarning"
+msgstr "操作警告！"
+
+msgid "operfail"
+msgstr "操作失败！"
+
+msgid "confirmoper"
+msgstr "确认操作！"
+
+msgid "operfailinfo"
+msgstr "操作失败，请重试或联系系统管理员！"
+
+msgid "Request Error!"
+msgstr "请求失败，请重试或联系系统管理员！"
+
+msgid "Records is 0"
+msgstr "没有记录！"
+
+msgid "From _START_ to _END_ item the total is _TOTAL_ "
+msgstr "从 _START_ 到 _END_ 条记录--总共 _TOTAL_ 条"
+
+msgid "show _MENU_ entries"
+msgstr "每页显示 _MENU_ 条"
+
+msgid "Unit _UNIT_"
+msgstr "存储单位 _UNIT_ "
+
+msgid "No Records Found!"
+msgstr "没有您要搜索的内容"
+
+msgid "Search"
+msgstr "搜索"
+
+msgid "First Page"
+msgstr "第一页"
+
+msgid "Previous Page"
+msgstr "上一页"
+
+msgid "Next Page"
+msgstr "下一页"
+
+msgid "Last Page"
+msgstr "末页"
+
+msgid "username_error"
+msgstr "3-10字符,包括字母、数字、@、短横线、下划线以及圆点"
+
+msgid "password_error"
+msgstr "6-20字符,包括英文字母、数字、@、短横线、下划线"
+
+msgid "repassword_error"
+msgstr "请输入重复密码"
+
+msgid "filestatuslist"
+msgstr "文件状态列表"
+
+msgid "freshtime"
+msgstr "刷新时间"
+
+msgid "seconds"
+msgstr "秒"
+
+msgid "nodename"
+msgstr "节点名称"
+
+msgid "deviceid"
+msgstr "设备唯一标识号"
+
+msgid "license"
+msgstr "设备注册号"
+
+msgid "productype"
+msgstr "产品型号"
+
+msgid "productserialnum"
+msgstr "产品序列号"
+
+msgid "softwareversion"
+msgstr "软件版本号"
+
+msgid "password_modify"
+msgstr "修改密码"
+
+msgid "old_password"
+msgstr "旧密码"
+
+msgid "new_password"
+msgstr "新密码"
+
+msgid "confirm_new_password"
+msgstr "确认新密码"
+
+msgid "old_password_please"
+msgstr "请填写旧密码！"
+
+msgid "new_password_please"
+msgstr "请填写新密码！"
+
+msgid "password_length"
+msgstr "密码长度不能少于6位！"
+
+msgid "confirm_new_password_please"
+msgstr "请确认新密码！"
+
+msgid "confirm_new_password_error"
+msgstr "两次新密码填写不一致！"
+
+msgid "old_password_error"
+msgstr "旧密码填写错误！"
+
+msgid "password_modify_success"
+msgstr "修改成功，请重新登录！"
+
+#-------------------------------navigator--------------------------------------------
+msgid "clusterhome"
+msgstr "主页"
+
+msgid "clusternode"
+msgstr "存储节点"
+
+msgid "clustergroup"
+msgstr "存储组"
+
+msgid "clusterunit"
+msgstr "存储单元"
+
+msgid "clusterservice"
+msgstr "存储服务"
+
+msgid "user_guide"
+msgstr "使用向导"
+
+msgid "step1"
+msgstr "第一步"
+
+msgid "groupcreate"
+msgstr "创建组"
+
+msgid "step2"
+msgstr "第二步"
+
+msgid "nodecreate"
+msgstr "创建节点"
+
+msgid "step3"
+msgstr "第三步"
+
+msgid "servicecreate"
+msgstr "创建服务"
+
+msgid "create_or_manage_groups"
+msgstr "创建或管理组"
+
+msgid "create_or_manage_nodes"
+msgstr "创建或管理节点"
+
+msgid "create_or_manage_services"
+msgstr "创建或管理服务"
+
+msgid "distributed"
+msgstr "分布"
+
+msgid "replicated"
+msgstr "冗余"
+
+msgid "striped"
+msgstr "分片"
+
+msgid "distributed_striped"
+msgstr "分布分片"
+
+msgid "distributed_replicated"
+msgstr "分布冗余"
+
+msgid "striped_replicated"
+msgstr "分片冗余"
+
+
+#-------------------------------shotcuts----------------------------------------------
+msgid "currlocate"
+msgstr "当前位置"
+
+msgid "index"
+msgstr "首页"
+
+#-------------------------------clustergroup----------------------------------
+msgid "clustergroupname"
+msgstr "组名称"
+
+msgid "clustergroupnodes"
+msgstr "组节点"
+
+msgid "clustergroupcreate"
+msgstr "新建存储组"
+
+msgid "groupnamemustnotnull"
+msgstr "组名不能为空，请检查！"
+
+msgid "nonodeselected"
+msgstr "未选择节点，请重新操作！"
+
+msgid "clusternodeselected"
+msgstr "已选择"
+
+msgid "clustergroupnodetodel"
+msgstr "删除节点"
+
+msgid "clustergroupcreatesucc"
+msgstr "存储组新建成功！"
+
+msgid "clustergroupaddsucc"
+msgstr "存储组节点添加成功！"
+
+msgid "clustergroupdeleteconfirm"
+msgstr "确定要删除该存储组吗？！"
+
+msgid "clustergroupdeletesucc"
+msgstr "存储组删除成功！"
+
+msgid "clustergroupadd"
+msgstr "存储组节点添加"
+
+msgid "clustergroupedit"
+msgstr "编辑存储组"
+
+msgid "clustergroupeditsucc"
+msgstr "存储组更新成功！"
+
+msgid "nodewithoutgroupname"
+msgstr "未被分组的节点"
+#-------------------------------clusternode--------------------------------------
+
+msgid "clusternodecreate"
+msgstr "添加存储节点"
+
+msgid "creatingnodenow"
+msgstr "正在添加节点"
+
+msgid "nodenamemustnotnull"
+msgstr "节点不能为空，请检查！"
+
+msgid "clusternodereplace"
+msgstr "替换存储节点"
+
+msgid "clusternodeold"
+msgstr "需要替换的节点"
+
+msgid "clusternodenew"
+msgstr "可用节点IP地址"
+
+msgid "replacingnodenow"
+msgstr "正在替换节点..."
+
+msgid "clusternodereplacesucc"
+msgstr "替换节点添加成功！"
+
+msgid "clusternodecreatebyconfig"
+msgstr "从配置文件添加存储节点"
+
+msgid "clusternodecreatesucc"
+msgstr "存储节点添加成功！"
+
+msgid "deletingnodenow"
+msgstr "正在删除节点！"
+
+msgid "clusternodedeletesucc"
+msgstr "存储节点删除成功！"
+
+msgid "clusternodedeleteconfirm"
+msgstr "该操作可能导致您的数据丢失，确定要进行此操作吗？！"
+
+msgid "clusternodedelofflinetitle"
+msgstr "删除离线节点"
+
+msgid "clusternodedeloffline"
+msgstr "1、先添加新节点。<br>2、离线节点硬盘损坏：用新节点硬盘替换所有原节点中服务中的硬盘。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;离线节点硬盘完好：将所有硬盘移至新节点中后，用新节点上的硬盘替换服务中的硬盘（不格式化）。<br>3、删除离线节点。"
+
+msgid "clusternodereplaceconfirm"
+msgstr "该操作可能导致被替换节点数据丢失，确定要进行此操作吗？！"
+
+msgid "clusternodehost"
+msgstr "存储节点"
+
+msgid "clusternodeipaddr"
+msgstr "存储节点IP地址"
+
+msgid "clusternodehostname"
+msgstr "存储节点主机名"
+
+msgid "fillupclusternodeipaddr"
+msgstr "存储节点IP地址不能为空！"
+
+msgid "clusternodecifsstatus"
+msgstr "存储节点CIFS状态"
+
+msgid "restartingcifsnow"
+msgstr "正在重新启动CIFS服务"
+
+msgid "clusternodecifsrestartsucc"
+msgstr "CIFS重新启动成功"
+
+msgid "clusterservicecifsaddusersucc"
+msgstr "添加CIFS用户成功"
+
+msgid "clusterservicecifsdelusersucc"
+msgstr "删除CIFS用户成功"
+
+msgid "clusternodenfsstatus"
+msgstr "存储节点NFS状态"
+
+msgid "clusternodestatus"
+msgstr "存储节点状态"
+
+msgid "restartingnfsnow"
+msgstr "正在重新启动NFS服务"
+
+msgid "clusterservicenfsaddusersucc"
+msgstr "添加NFS用户成功"
+
+msgid "clusterservicenfsdelusersucc"
+msgstr "删除NFS用户成功"
+
+msgid "clusternodenfsrestartsucc"
+msgstr "NFS重新启动成功"
+
+msgid "clusternodeconfig"
+msgstr "存储节点配置文件"
+
+msgid "clusternodeview"
+msgstr "节点详细信息"
+
+msgid "clusternodediskinfo"
+msgstr "磁盘信息"
+
+msgid "clusternoderaidcreate"
+msgstr "创建RAID"
+
+msgid "clusternoderaiddel"
+msgstr "删除RAID"
+
+msgid "clusternoderaidset_hs"
+msgstr "设置热备盘"
+
+msgid "clusternoderaid_active"
+msgstr "激活RAID"
+
+msgid "clusternodedisk_active"
+msgstr "删除磁盘RAID信息"
+
+msgid "clusternodediskunused"
+msgstr "可使用盘"
+
+msgid "clusternodediskselected"
+msgstr "已选择"
+
+msgid "clusterraidlv"
+msgstr "RAID级别"
+
+msgid "clusterraidname"
+msgstr "RAID名称"
+
+msgid "raiddevmustnotnull"
+msgstr "创建RAID设备不能为空，请检查！"
+
+msgid "clusternoderaiddel_hs"
+msgstr "删除热备盘"
+
+msgid "clusternodedisk_hs"
+msgstr "可删除盘"
+
+msgid "clusternodedisk_update"
+msgstr "更新磁盘信息"
+
+msgid "clusternodediskdev"
+msgstr "磁盘设备"
+
+msgid "clusternodedisksize"
+msgstr "磁盘大小"
+
+msgid "clusternodediskmodel"
+msgstr "磁盘型号"
+
+msgid "clusternodedisktype"
+msgstr "磁盘类型"
+
+msgid "clusternodediskstatus"
+msgstr "磁盘状态"
+
+msgid "clusternoderaidinfo"
+msgstr "阵列信息"
+
+msgid "clusternoderaidshowname"
+msgstr "阵列名称"
+
+msgid "clusternoderaidsize"
+msgstr "阵列大小"
+
+msgid "clusterraidsz"
+msgstr "条带大小"
+
+msgid "clusternoderaidstatus"
+msgstr "阵列状态"
+
+msgid "clusternodenetwork"
+msgstr "网络配置"
+
+msgid "clusternodenetbond"
+msgstr "网卡绑定"
+
+msgid "clusternodedisk"
+msgstr "磁盘管理"
+
+msgid "clusternoderaid"
+msgstr "阵列管理"
+
+msgid "clusternoderaid_inactive"
+msgstr "未激活RAID"
+
+msgid "clusternoderaid_activenum"
+msgstr "RAID中磁盘数量"
+
+msgid "creatingraidnow"
+msgstr "正在创建RAID"
+
+msgid "deleteraidnow"
+msgstr "正在删除RAID"
+
+msgid "clusternoderaiddeleteconfirm"
+msgstr "确定要删除该RAID吗？！"
+
+msgid "clusternoderaiddeletesucc"
+msgstr "删除RAID成功"
+
+msgid "clusternoderaidcreatesucc"
+msgstr "创建RAID成功"
+
+msgid "settinghotsparenow"
+msgstr "正在为RAID设置热备盘"
+
+msgid "settinghotsparesucc"
+msgstr "设置热备盘成功"
+
+msgid "raiddevforhotsparemustnotnull"
+msgstr "请选择要为RAID设置的热备盘"
+
+msgid "thereisnoraidnow"
+msgstr "RAID不存在，请先创建RAID！"
+
+msgid "thereisnoraidtosethsnow"
+msgstr "没有可设置热备盘的RAID！"
+
+msgid "raiddevtodelhotsparemustnotnull"
+msgstr "请选择要删除的热备盘"
+
+msgid "deletinghotsparenow"
+msgstr "正在删除热备盘"
+
+msgid "deletinghotsparesucc"
+msgstr "成功删除热备盘"
+
+msgid "nohotspare"
+msgstr "无热备盘"
+
+msgid "nounuseddisk"
+msgstr "无可用盘"
+
+msgid "updatingdiskinfonow"
+msgstr "正在更新磁盘信息"
+
+msgid "updatediskinfosucc"
+msgstr "磁盘信息更新成功"
+
+msgid "activedisknow"
+msgstr "正在激活磁盘"
+
+msgid "activedisksucc"
+msgstr "激活磁盘成功"
+
+msgid "op_not_raid"
+msgstr "该操作不能包含RAID!"
+
+msgid "op_not_diffnode"
+msgstr "该操作不能跨节点!"
+
+msgid "op_not_used"
+msgstr "该操作不能包含已使用的!"
+
+msgid "op_confirm"
+msgstr "该操作存在风险！您确定要执行该操作？"
+
+msgid "reset_disk_confirm"
+msgstr "该操作只能在该磁盘未处于服务中但状态错误的显示为使用中的时候使用！"
+
+msgid "activeraidnow"
+msgstr "正在激活RAID"
+
+msgid "activeraidsucc"
+msgstr "激活RAID成功"
+
+msgid "clusternodeinfo"
+msgstr "节点信息"
+
+msgid "clusternodechecklicensesucc"
+msgstr "设备注册号创建成功！"
+
+msgid "clusternodereplace_nodisk"
+msgstr "磁盘替换"
+
+msgid "clusternodediskreplaced"
+msgstr "需要替换的磁盘"
+
+msgid "nowarnservice"
+msgstr "无报警状态服务"
+
+msgid "serviceneedreplacedisknum"
+msgstr "该服务在当前节点上需要替换的磁盘个数为"
+
+msgid "replacediskmustnotnull"
+msgstr "请选择要替换的可用磁盘！"
+
+msgid "replacenodisknow"
+msgstr "正在替换磁盘"
+
+msgid "clusternodereplacenodisksucc"
+msgstr "磁盘替换成功！"
+
+
+msgid "clusternodereplace_repeat"
+msgstr "被替换的填写有重复的！"
+
+msgid "clusternodereplace_none"
+msgstr "未填写任何被替换的！"
+
+msgid "clusternodereplace_insert_error"
+msgstr "填写错误，请填写服务磁盘备选列表里存在的！"
+
+msgid "clusternodereplace_diff_node_confirm"
+msgstr "要替换的磁盘和被替换的磁盘不在同一节点，您确定继续？"
+
+msgid "clusternodereplace_size_confirm"
+msgstr "要替换的磁盘小于被替换的磁盘，您确定继续？"
+
+msgid "cluster_diskmap_notice"
+msgstr "注：盘位由左下角起，从左向右，从下到上依此类推（例如：最下一排从左向右为1234，从下数第二排从左向右为5678）。"
+
+
+#-------------------------------clusternodenetwork-------------------------------------
+msgid "clusternodeiface"
+msgstr "网卡设备"
+
+msgid "clusternodeifacecreate"
+msgstr "添加虚拟接口"
+
+msgid "clusternodeifacedev"
+msgstr "设备名称"
+
+msgid "clusternodeifacetype"
+msgstr "接口类型"
+
+msgid "clusternodeifaceaddress"
+msgstr "IP地址"
+
+msgid "clusternodeifacemac"
+msgstr "MAC地址"
+
+msgid "clusternodeifacebootup"
+msgstr "启动时激活？"
+
+msgid "clusternodesetipaddr"
+msgstr "设置IP地址"
+
+msgid "settingipaddrnow"
+msgstr "正在设置新IP地址"
+
+msgid "clusternodesetipaddrsucc"
+msgstr "设置IP地址成功！"
+
+msgid "clusternodenicdev"
+msgstr "网络设备"
+
+msgid "clusternewipaddr"
+msgstr "新建IP地址"
+
+msgid "clusternewmask"
+msgstr "子网掩码"
+
+msgid "clusternewgateway"
+msgstr "网关"
+
+msgid "clusternewbroadcast"
+msgstr "广播地址"
+
+msgid "clusternodesetbond"
+msgstr "创建网卡绑定"
+
+msgid "settingbondnow"
+msgstr "正在创建网卡绑定"
+
+msgid "clusternodesetbondsucc"
+msgstr "设置网卡绑定成功"
+
+msgid "clusterifacedevunused"
+msgstr "未使用网卡设备"
+
+msgid "clusterifacedevselected"
+msgstr "已选择网卡设备"
+
+msgid "clusternewifacelevel"
+msgstr "绑定级别"
+
+msgid "deletebondnow"
+msgstr "正在删除网卡绑定"
+
+msgid "bondipaddrmustnbechange"
+msgstr "绑定网卡IP地址修改已禁用！"
+
+msgid "clusternodebonddeletesucc"
+msgstr "删除网卡绑定成功"
+
+msgid "clusternodebonddeleteconfirm"
+msgstr "确定要删除该网卡绑定吗？！"
+
+msgid "dbclick to check out disk map"
+msgstr "双击查看磁盘位置"
+
+#-------------------------------clusterservice-----------------------------------------
+msgid "clusterservicecreate"
+msgstr "创建服务"
+
+msgid "Create Service"
+msgstr "新建服务"
+
+msgid "clusterservicextend"
+msgstr "服务扩容"
+
+
+msgid "cluster_service_node"
+msgstr "服务节点"
+
+msgid "cluster_client_node"
+msgstr "客户端节点"
+
+msgid "cluster_client_node_create"
+msgstr "添加客户端节点"
+
+msgid "cluster_client_node_ipaddr"
+msgstr "客户端节点IP"
+
+msgid "cluster_client_node_status"
+msgstr "客户端节点状态"
+
+msgid "cluster_client_node_now"
+msgstr "正在改变客户端节点状态"
+
+msgid "cluster_client_node_succ"
+msgstr "客户端节点状态改变成功！"
+
+msgid "cluster_service_del_client_node"
+msgstr "请先删除该服务的客户端节点！"
+
+msgid "ip_please"
+msgstr "请填写IP地址！"
+
+msgid "ip_exists"
+msgstr "该地址已存在！"
+
+msgid "ip_can_not_connect"
+msgstr "该地址无法连接！"
+
+msgid "ip_no_node"
+msgstr "该地址没有节点！"
+
+msgid "clusterserviceafrsyn"
+msgstr "同步磁盘"
+
+msgid "notstart"
+msgstr "未开始"
+
+msgid "fdcreating"
+msgstr "创建文件或文件夹"
+
+msgid "metadatafixing"
+msgstr "元数据修复"
+
+msgid "filefixing"
+msgstr "文件内容修复"
+
+msgid "dirfixing"
+msgstr "文件夹修复"
+
+msgid "fixingnow"
+msgstr "修复中"
+
+msgid "OK"
+msgstr "正常"
+
+msgid "synsize"
+msgstr "已同步"
+
+msgid "source"
+msgstr "来源"
+
+msgid "target"
+msgstr "目标"
+
+msgid "speed"
+msgstr "修复速度"
+
+msgid "procedure"
+msgstr "文件状态"
+
+msgid "filetree"
+msgstr "文件树"
+
+msgid "clusterservicelocalpro"
+msgstr "本地化优先"
+
+msgid "yes"
+msgstr "是"
+
+msgid "no"
+msgstr "否"
+
+msgid "clusterservicetype"
+msgstr "服务策略"
+
+msgid "clusterservicetype_none"
+msgstr "默认"
+
+msgid "clusterservicetype_afr"
+msgstr "冗余"
+
+msgid "clusterservicetype_strip"
+msgstr "分片"
+
+msgid "redundancy"
+msgstr "冗余度"
+
+msgid "redundancy must not be none"
+msgstr "不能为空"
+
+msgid "nodeordisknotfound"
+msgstr "未发现可用磁盘"
+
+msgid "redundancy must not less than 2"
+msgstr "至少不小于2"
+
+msgid "redundancy must be int"
+msgstr "只能是数字"
+
+msgid "isafr"
+msgstr "是否冗余"
+
+msgid "istrip"
+msgstr "是否分片"
+
+msgid "stripnum"
+msgstr "分片数量"
+
+msgid "newvolume"
+msgstr "新的卷"
+
+msgid "addafr"
+msgstr "添加新镜像"
+
+msgid "addstrip"
+msgstr "添加新分片"
+
+msgid "disknumincorrect"
+msgstr "所选磁盘数量不正确"
+
+msgid "clusterservicedevunused"
+msgstr "未使用设备"
+
+msgid "clusterservicedevselected"
+msgstr "已选择设备"
+
+msgid "clusterservicename"
+msgstr "服务名"
+
+msgid "clusterservicetotalsize"
+msgstr "大小"
+
+msgid "clusterserviceusedsize"
+msgstr "已使用大小"
+
+msgid "clusterserviceusage"
+msgstr "使用率"
+
+msgid "clusterserviceraidlv"
+msgstr "服务策略"
+
+msgid "clusterservicestatus"
+msgstr "服务状态"
+
+msgid "creatingservicenow"
+msgstr "正在创建服务！"
+
+msgid "noservicename"
+msgstr "服务名称缺省，请检查！"
+
+msgid "nodiskselected"
+msgstr "未选择磁盘，请重新操作！"
+
+msgid "clusterservicecreatesucc"
+msgstr "创建服务成功！"
+
+msgid "clusterservicestartconfirm"
+msgstr "要启动该服务吗？"
+
+msgid "startingservicenow"
+msgstr "正在启动服务！"
+
+msgid "clusterservicestartsucc"
+msgstr "服务已启动！"
+
+msgid "clusterservicestopconfirm"
+msgstr "确定要停止该服务吗？"
+
+msgid "stoppingservicenow"
+msgstr "正在停止服务！"
+
+msgid "clusterservicestopsucc"
+msgstr "服务已停止！"
+
+msgid "clusterservicefixconfirm"
+msgstr "确认要修复该服务？"
+
+msgid "fixingservicenow"
+msgstr "正在修复服务"
+
+msgid "clusterservicefixsucc"
+msgstr "成功修复服务！"
+
+msgid "deletingservicenow"
+msgstr "正在删除服务！"
+
+msgid "clusterservicedeleteconfirm"
+msgstr "删除该服务将可能导致您的数据完全丢失，确定要进行此操作吗？！"
+
+msgid "clusterservicedestroysucc"
+msgstr "服务已删除！"
+
+
+msgid "clusterservicesharemanage"
+msgstr "共享管理"
+
+msgid "clusterservicenfs_status"
+msgstr "LINUX共享状态"
+
+msgid "clusterservicenfsmanage"
+msgstr "LINUX共享管理"
+
+msgid "nfsusermanage"
+msgstr "LINUX共享用户管理"
+
+msgid "nfschecklinks"
+msgstr "查看LINUX连接"
+
+msgid "clusterservicenfsdellinksucc"
+msgstr "删除LINUX连接成功"
+
+msgid "clusterservicecifsdellinksucc"
+msgstr "删除WINDOWS连接成功"
+
+msgid "targetip"
+msgstr "挂载地址"
+
+msgid "clusterservicenfsstartconfirm"
+msgstr "要启动该服务的LINUX共享吗？"
+
+msgid "startingnfsnow"
+msgstr "正在启动LINUX共享"
+
+msgid "clusterservicenfsstartsucc"
+msgstr "成功启动LINUX共享！"
+
+msgid "clusterservicenfsstopconfirm"
+msgstr "要停止该服务的LINUX共享吗？"
+
+msgid "stoppingnfsnow"
+msgstr "正在停止LINUX共享"
+
+msgid "clusterservicenfsstopsucc"
+msgstr "成功停止LINUX共享！"
+
+msgid "clusterservicecifs_status"
+msgstr "WINDOWS共享状态"
+
+msgid "clusterservicecifsmanage"
+msgstr "WINDOWS共享管理"
+
+msgid "cifsusermanage"
+msgstr "WINDOWS共享用户管理"
+
+msgid "cifschecklinks"
+msgstr "查看WINDOWS连接"
+
+msgid "linknode"
+msgstr "连接节点"
+
+msgid "user"
+msgstr "用户"
+
+msgid "pid"
+msgstr "进程号"
+
+msgid "linktime"
+msgstr "连接时间"
+
+msgid "clusterservicecifsstartconfirm"
+msgstr "要启动该服务的WINDOWS共享吗？"
+
+msgid "startserivcefirst"
+msgstr "请先启动该服务!"
+
+msgid "startcifsfirst"
+msgstr "请先启动CIFS服务!"
+
+msgid "startnfsfirst"
+msgstr "请先启动NFS服务!"
+
+msgid "startingcifsnow"
+msgstr "正在启动WINDOSW共享"
+
+msgid "clusterservicecifsstartsucc"
+msgstr "成功启动WINDOWS共享！"
+
+msgid "clusterservicecifsstopconfirm"
+msgstr "要停止该服务的WINDOWS共享吗？"
+
+msgid "stoppingcifsnow"
+msgstr "正在停止WINDOSW共享"
+
+msgid "clusterservicecifsstopsucc"
+msgstr "成功停止WINDOWS共享！"
+
+msgid "extendingservicenow"
+msgstr "正在扩容"
+
+msgid "clusterexservicesucc"
+msgstr "扩容成功！"
+
+msgid "nodevavailable"
+msgstr "无可用设备！"
+
+msgid "noservicefound"
+msgstr "请先创建服务！"
+
+msgid "clusterservicedisk_mirrorname"
+msgstr "服务镜像组名"
+
+msgid "clusterservicedisk_main"
+msgstr "同步磁盘"
+
+msgid "clusterservicedisk_processor"
+msgstr "同步状态"
+
+msgid "clusterservicedisk_mirror"
+msgstr "镜像磁盘"
+
+msgid "clusterservicedisk_mirrorrestsize"
+msgstr "待同步总大小"
+
+msgid "clusterservicedisk_mirrorresttime"
+msgstr "剩余时间"
+
+msgid "clusterservicedisk_mirrorsynsize"
+msgstr "已同步大小"
+
+msgid "clusterservicedisk_mirrorspeed"
+msgstr "同步速度"
+#-------------------------------clusternotify--------------------------
+
+msgid "clusternotify"
+msgstr "存储通知"
+
+msgid "clusternotifyop"
+msgstr "通知类型"
+
+msgid "clusternotifytime"
+msgstr "时间"
+
+msgid "clusternotifyip"
+msgstr "消息来源"
+
+msgid "clusternotifypnode"
+msgstr "问题节点"
+
+msgid "clusternotifyevnet"
+msgstr "事件类型"
+
+msgid "clusternotifydetail"
+msgstr "详细"
+
+msgid "clusternotifyfocusall"
+msgstr "标记所有为已读"
+
+msgid "clusternotifydelall"
+msgstr "删除所有已读"
+
+msgid "RaidEvent"
+msgstr "RAID"
+
+msgid "DiskEvent"
+msgstr "磁盘"
+
+msgid "FileSystemEvent"
+msgstr "文件系统"
+
+msgid "failure"
+msgstr "读/写失败"
+
+msgid "Disk"
+msgstr "磁盘"
+
+msgid "Position"
+msgstr "盘位"
+
+msgid "noreport"
+msgstr "没有消息"
+
+msgid "Node"
+msgstr "节点"
+
+msgid "TargetIP"
+msgstr "目标IP地址"
+
+msgid "Ping"
+msgstr "PING事件"
+
+msgid "NetLink"
+msgstr "网络连接"
+
+msgid "Ethdevice"
+msgstr "网络设备"
+
+msgid "Linked"
+msgstr "连接状态"
+
+msgid "No-link"
+msgstr "未连接"
+
+msgid "Linking"
+msgstr "已连接"
+
+msgid "On-line"
+msgstr "在线"
+
+msgid "Off-line"
+msgstr "离线"
+
+msgid "SpeedDown"
+msgstr "网卡降速"
+
+msgid "SpeedResume"
+msgstr "网卡恢复速度"
+
+msgid "DeviceDisappeared"
+msgstr "设备丢失"
+
+msgid "RebuildStarted"
+msgstr "重构开始"
+
+msgid "RebuildFinished"
+msgstr "重构完成"
+
+msgid "SpareActive"
+msgstr "热备激活"
+
+msgid "FailSpare"
+msgstr "热备失效"
+
+msgid "Fail"
+msgstr "RAID损坏"
+
+msgid "NewArray"
+msgstr "新RAID组"
+
+#-------------------------------pythonsysinfo--------------------------
+msgid "mounted filesystems"
+msgstr "挂载文件系统"
+
+msgid "mountpoint"
+msgstr "挂载点"
+
+msgid "type"
+msgstr "类型"
+
+msgid "partition"
+msgstr "分区"
+
+msgid "usage"
+msgstr "使用率"
+
+msgid "free"
+msgstr "可用"
+
+msgid "size"
+msgstr "大小"
+
+msgid "totals"
+msgstr "总大小"
+
+msgid "days"
+msgstr "天"
+
+msgid "hours"
+msgstr "时"
+
+msgid "minutes"
+msgstr "分"
+
+msgid "system information"
+msgstr "系统信息"
+
+msgid "cpu speed"
+msgstr "CPU速度"
+
+msgid "cache size"
+msgstr "快取大小"
+
+msgid "virtualization"
+msgstr "虚拟化"
+
+msgid "bus speed"
+msgstr "总线速度"
+
+msgid "system bogomips"
+msgstr "系统Bogomips"
+
+msgid "cpu temp"
+msgstr "CPU温度"
+
+msgid "hardware information"
+msgstr "硬件信息"
+
+msgid "Processors"
+msgstr "处理器"
+
+msgid "PCI"
+msgstr "PCI设备"
+
+msgid "IDE"
+msgstr "IDE设备"
+
+msgid "SCSI"
+msgstr "SCSI设备"
+
+msgid "USB"
+msgstr "USB设备"
+
+msgid "memory usage"
+msgstr "内存使用率"
+
+msgid "physical memory"
+msgstr "物理内存"
+
+msgid "kernel + applications"
+msgstr "内核和应用"
+
+msgid "buffers"
+msgstr "缓冲"
+
+msgid "cached"
+msgstr "快取"
+
+msgid "disk swap"
+msgstr "硬盘备用"
+
+msgid "interface"
+msgstr "设备"
+
+msgid "network usage"
+msgstr "网络使用率"
+
+msgid "recieved"
+msgstr "接收"
+
+msgid "transfered"
+msgstr "送出"
+
+msgid "error/drops"
+msgstr "错误/丢失"
+
+msgid "voltage"
+msgstr "电压"
+
+msgid "static information"
+msgstr "静态信息"
+
+msgid "hostname"
+msgstr "主机名"
+
+msgid "listening ip"
+msgstr "监听地址"
+
+msgid "kernel version"
+msgstr "内核版本"
+
+msgid "distro name"
+msgstr "发行版本"
+
+msgid "uptime"
+msgstr "最近启动时间"
+
+msgid "current users"
+msgstr "目前用户数"
+
+msgid "load averages"
+msgstr "平均负载"
+
+msgid "dynamic information"
+msgstr "动态信息"
+
+msgid "system vitals"
+msgstr "基础信息"
+#-------------------------------processing code--------------------
+msgid "Partition disk ..."
+msgstr "正在格式化磁盘 ..."
+
+msgid "Create volen file ..."
+msgstr "正在创建服务配置文件 ..."
+
+msgid "Update disk ..."
+msgstr "正在更新磁盘信息 ..."
+
+msgid "Finding system disk ..."
+msgstr "正在发现磁盘 ..."
+
+msgid "Finding plug in disk ..."
+msgstr "正在发现新插入磁盘 ..."
+
+msgid "Finding plug out disk ..."
+msgstr "正在发现拔出磁盘 ..."
+
+msgid "Init service ..."
+msgstr "正在初始化服务 ..."
+
+msgid "Check out service status ..."
+msgstr "正在检查服务状态 ..."
+
+msgid "Check out cifs status ..."
+msgstr "正在检查节点CIFS状态 ..."
+
+msgid "Check out nfs status ..."
+msgstr "正在检查节点NFS状态 ..."
+
+#-------------------------------error code--------------------------
+#group error code
+
+msgid "10000"
+msgstr "您所填入的设备注册号不正确，请检查！"
+
+msgid "10001"
+msgstr "要增加的组名已经存在"
+
+msgid "10002"
+msgstr "要删除的组名不存在"
+
+msgid "10003"
+msgstr "要修改的组名不存在"
+
+msgid "10004"
+msgstr "修改后的组名已经存在"
+
+msgid "10005"
+msgstr "查询状态的主机不存在"
+
+msgid "10006"
+msgstr "要查询的组名不存在"
+
+msgid "10007"
+msgstr "该节点已经存在该组中"
+
+#node error code
+msgid "11096"
+msgstr "要添加的节点IP已被使用"
+
+msgid "11097"
+msgstr "节点名应该是满足以下4个条件的字符串：1.3-20个由0-9、a-z、A-Z、-、. 组成且只能以数字或字母开头 2.短横线和圆点必须由数字或字母隔开 3.不能全部为数字 4.不能只包含数字和圆点"
+
+msgid "11098"
+msgstr "要添加的节点暂时无法连接,请检查网络"
+
+msgid "11099"
+msgstr "要添加的节点集群服务暂时无法使用"
+
+msgid "11100"
+msgstr "增加节点的IP地址不合法"
+
+msgid "11101"
+msgstr "配置文件中节点重复"
+
+msgid "11102"
+msgstr "要增加的节点已经存在或者IP地址属于集群中的节点"
+
+msgid "11103"
+msgstr "节点的所属组不存在"
+
+msgid "11104"
+msgstr "要删除的节点不存在"
+
+msgid "11105"
+msgstr "节点已经使用，无法删除节点"
+
+msgid "11106"
+msgstr "要设置组的节点不存在"
+
+msgid "11107"
+msgstr "要查询的节点不存在"
+
+msgid "11108"
+msgstr "要查询的信息不存在"
+
+msgid "11109"  
+msgstr "无法与节点建立连接，请在节点上启动服务后再试"
+
+msgid "11110"  
+msgstr "更新硬盘信息时，节点不存在"
+
+msgid "11111"  
+msgstr "更新硬盘信息时，节点无法连接"
+
+msgid "11112"  
+msgstr "增加节点时，ip已经存在(hosts文件中)"
+
+msgid "11113"  
+msgstr "增加节点时，hostname已经存在(hosts文件中)"
+
+msgid "11114"  
+msgstr "(严重错误)节点的缓存文件和服务的配置文件不一致，某些硬盘在缓存文件中被标志为未使用，而在服务配置文件中标志为已使用"
+
+
+msgid "11115"  
+msgstr "设置IP时，节点不存在"
+
+msgid "11116"
+msgstr "要设置ip的网卡不存在"
+
+msgid "11117"
+msgstr "要设置的ip已经存在"
+
+msgid "11118"
+msgstr "ip设置失败，无法与节点取得连接"
+
+msgid "11119"  
+msgstr "节点设置ip失败"
+
+msgid "11120"  
+msgstr "被替换的节点不存在"
+
+msgid "11121"  
+msgstr "替换的节点已存在"
+
+msgid "11122"
+msgstr "被替换节点的新节点名已经存在"
+
+msgid "11123"  
+msgstr "一个节点无法连接，无法进行替换"
+
+msgid "11124" 
+msgstr "所输入的IP地址不合法"
+
+msgid "11125" 
+msgstr "替换节点时，获取被替换硬盘信息出错"
+
+msgid "11126"  
+msgstr "替换节点不符合条件，无法进行替换"
+
+msgid "11127"  
+msgstr "替换节点时，销毁硬盘出错"
+
+msgid "11128"  
+msgstr "替换节点时，被替换节点上无已使用硬盘(可将该节点直接删除)"
+
+msgid "11129"
+msgstr "节点或该节点上的服务无法连接"
+
+#网卡绑定时
+
+msgid "11328"
+msgstr "节点不存在"
+
+msgid "11329"
+msgstr "绑定的网卡数少于2"
+
+msgid "11330"
+msgstr "绑定的模式不存在"
+
+msgid "11331"
+msgstr "绑定失败"
+
+msgid "11332"
+msgstr "要绑定的网卡不存在"
+
+msgid "11333"
+msgstr "要绑定的网卡中未包含当前连接网卡"
+
+msgid "11334"
+msgstr "节点无法连接"
+
+msgid "11435"
+msgstr "节点不存在"
+
+msgid "11436"
+msgstr "删除网卡绑定失败"
+
+msgid "11437"
+msgstr "网卡绑定不存在"
+
+msgid "12001"  
+msgstr "要启动的硬盘已经启动"
+
+msgid "12002"  
+msgstr "硬盘无法挂载"
+
+msgid "12003"  
+msgstr "要停止的硬盘已经停止"
+
+msgid "12004"  
+msgstr "硬盘已经停止(但pid文件仍然存在)"
+
+msgid "12005"  
+msgstr "硬盘已经停止"
+
+msgid "12006"  
+msgstr "要启动的磁盘设备不存在"
+
+msgid "12007"  
+msgstr "磁盘设备不存在"          
+
+msgid "12008"  
+msgstr "磁盘设备存在，但没有分配端口号"
+
+msgid "12009"  
+msgstr "分配了端口号，但没有使用"
+
+msgid "12010"  
+msgstr "已经使用，但没有启动"
+
+msgid "12011"  
+msgstr "要启动的磁盘没有使用者"
+
+msgid "12012"
+msgstr "当前替换磁盘容量小于被替换的磁盘容量"
+
+msgid "13101"  
+msgstr "要查询的服务不存在"
+
+msgid "13102"  
+msgstr "要创建的服务已经存在"
+
+msgid "13103"  
+msgstr "创建服务时，输入的硬盘格式有错误"
+
+msgid "13104"  
+msgstr "创建服务时，硬盘所在节点不存在"
+
+msgid "13105"  
+msgstr "创建服务时，硬盘不存在"
+
+msgid "13106"  
+msgstr "创建服务时，硬盘已经被使用"
+
+msgid "13107"  
+msgstr "要启动的服务不存在"
+
+msgid "13108"  
+msgstr "要停止的服务不存在"
+
+msgid "13109"  
+msgstr "要销毁的服务不存在"
+
+msgid "13110"  
+msgstr "要列出状态的服务不存在"
+
+msgid "13111"  
+msgstr "要增加硬盘的服务不存在"
+
+msgid "13212"  
+msgstr "扩充容量时，输入的硬盘格式有错误"
+
+msgid "13213"  
+msgstr "扩充容量时，硬盘所在节点不存在"
+
+msgid "13214"  
+msgstr "扩充容量时，硬盘不存在"
+
+msgid "13215"  
+msgstr "扩充容量时，硬盘已经被使用"
+
+msgid "13216"  
+msgstr "创建服务时，节点无法链接"
+
+msgid "13217"  
+msgstr "修复服务时，服务不存在"
+
+msgid "13218"
+msgstr "设置的raid级别不存在"
+
+msgid "13219"
+msgstr "冗余策略的服务需要偶数个磁盘"
+
+msgid "13220"
+msgstr "扩充容量时，因服务为raid1，盘的个数应为偶数个"
+
+msgid "13221"
+msgstr "修复服务失败"
+
+msgid "13222"
+msgstr "要输出的服务不存在(cifs)"
+
+#停止服务时
+
+msgid "13223" 
+msgstr "要停止的服务正在使用，请查看WINDOWS或者LINUX连接及其它输出是否关闭或移除"
+
+#删除服务时
+
+msgid "13224" 
+msgstr "要删除的服务正在使用，请查看WINDOWS或者LINUX连接及其它输出是否关闭或移除"
+
+#扩充容量时
+msgid "13225" 
+msgstr "扩容失败"
+
+msgid "13226" 
+msgstr "要输出的服务不存在(nfs)"
+
+msgid "13227" 
+msgstr "查询AFR同步信息的服务不存在"
+
+msgid "13228" 
+msgstr "查询AFR同步信息的服务RAID级别不是AFR"
+
+msgid "13229" 
+msgstr "触发AFR同步的服务不存在"
+
+msgid "13230" 
+msgstr "添加/删除SAMBA用户时缺少用户名"
+
+msgid "13231" 
+msgstr "添加/删除SAMBA用户时未设置密码"
+
+msgid "13232" 
+msgstr "添加SAMBA用户失败"
+
+msgid "13233" 
+msgstr "删除SAMBA用户失败"
+
+msgid "13234" 
+msgstr "添加/删除NFS用户时缺少用户名"
+
+msgid "13235" 
+msgstr "添加NFS用户失败"
+
+msgid "13236" 
+msgstr "删除NFS用户失败"
+
+msgid "13237" 
+msgstr "停止CIFS服务失败，请查看其连接状况"
+
+msgid "13238" 
+msgstr "停止NFS服务失败，请查看其连接状况"
+
+msgid "13441"
+msgstr "服务已启动！"
+
+msgid "13442"
+msgstr "digioceanfs.volume-id 不存在！"
+
+msgid "13443"
+msgstr "Volume id 与磁盘信息不匹配！"
+
+msgid "13444"
+msgstr "进程中有其他节点正在连接！"
+
+msgid "13445"
+msgstr "磁盘目录不存在！"
+
+msgid "13446"
+msgstr "服务启动失败！"
+
+msgid "13447"
+msgstr "服务未启动！"
+
+msgid "13448"
+msgstr "服务停止失败！"
+
+msgid "13449"
+msgstr "进程中有其他节点正在连接！"
+
+msgid "13450"
+msgstr "服务删除失败！"
+
+msgid "13451"
+msgstr "磁盘挂载失败，请检查磁盘挂载点！"
+
+msgid "13452"
+msgstr "磁盘挂载失败，请检查磁盘挂载点！"
+
+msgid "13453"
+msgstr "磁盘已经被使用！"
+
+msgid "13454"
+msgstr "磁盘挂载失败，请检查磁盘挂载点！"
+
+msgid "13455"
+msgstr "磁盘挂载失败，请检查磁盘挂载点！"
+
+msgid "13456"
+msgstr "服务创建失败！"
+
+msgid "13457"
+msgstr "服务中的磁盘不存在！"
+
+msgid "13458"
+msgstr "服务中的磁盘未挂载！"
+
+msgid "13459"
+msgstr "服务中的磁盘挂载点不存在！"
+
+msgid "13501"
+msgstr "客户端节点删除失败，删除节点必须保证所有存储节点和客户端节点均处于在线状态！"
+
+msgid "13502"
+msgstr "客户端节点删除失败!"
+
+msgid "13503"
+msgstr "客户端节点添加失败！"
+
+msgid "13504"
+msgstr "客户端节点启动失败，请先启动服务！"
+
+msgid "14001"
+msgstr "创建RAID失败，请查看RAID所在节点是否连接！"
+
+msgid "14002"
+msgstr "创建RAID失败，所选择硬盘已被RAID使用或是被拔出！"
+
+msgid "14003"
+msgstr "创建RAID失败，所选择硬盘被拔出！"
+
+msgid "14004"
+msgstr "创建RAID失败，所选择硬盘不存在（节点）！"
+
+msgid "14005"
+msgstr "创建RAID失败，所选择硬盘已经被使用（节点）！"
+
+msgid "14006"
+msgstr "创建RAID所用磁盘少于2个"
+
+msgid "14007"
+msgstr "RAID级别错误"
+
+msgid "14008"
+msgstr "CHUNK大小错误"
+
+msgid "14009"
+msgstr "创建RAID6需要至少4块磁盘！"
+
+msgid "14010"
+msgstr "创建RAID10需要至少4块磁盘！"
+
+msgid "14011"
+msgstr "创建RAID10磁盘数量必须是偶数！"
+
+msgid "14012"
+msgstr "创建RAID5需要至少3块磁盘！"
+
+msgid "14013"
+msgstr "创建RAID失败！"
+
+msgid "14107"
+msgstr "删除RAID失败，RAID所在节点不存在！"
+
+msgid "14108"
+msgstr "删除RAID失败，要删除的RAID不存在！"
+
+msgid "14109"
+msgstr "删除RAID失败，要删除的盘不是RAID！"
+
+msgid "14110"
+msgstr "删除RAID失败，要删除的RAID已经被使用！"
+
+msgid "14111"
+msgstr "删除RAID失败，要删除的RAID不存在（节点）！"
+
+msgid "14112"
+msgstr "删除RAID失败，要删除的盘不是RAID（节点）！"
+
+msgid "14113"
+msgstr "删除RAID失败，要删除的RAID已经被使用！"
+
+#查看RAID信息时
+
+msgid "14214"
+msgstr "请检查RAID所在节点连接状况！"
+
+msgid "14215"
+msgstr "RAID不存在！"
+
+msgid "14216"
+msgstr "该盘不是RAID！"
+
+#设置热备盘时
+
+msgid "14317"
+msgstr "RAID所在节点不存在"
+
+msgid "14318"
+msgstr "raid不存在"
+
+msgid "14319"
+msgstr "该磁盘不是raid"
+
+msgid "14320"
+msgstr "要设置的热备盘不存在"
+
+msgid "14321"
+msgstr "要设置的热备盘已经被使用"
+
+msgid "14322"
+msgstr "RAID不存在(节点)"
+
+msgid "14323"
+msgstr "该磁盘不是raid(节点)"
+
+msgid "14324"
+msgstr "要设置的热备盘不存在"
+
+msgid "14325"
+msgstr "要设置的热备盘已经被使用"
+
+msgid "14326"
+msgstr "该RAID级别不能设置热备盘"
+
+msgid "14327"
+msgstr "设置热备盘失败"
+
+#删除热备盘时
+
+msgid "14427"
+msgstr "RAID所在节点不存在"
+
+msgid "14428"
+msgstr "RAID不存在"
+
+msgid "14429"
+msgstr "该磁盘不是RAID"
+
+msgid "14430"
+msgstr "要删除的盘不在RAID中或不是热备盘"
+
+msgid "14431"
+msgstr "RAID不存在(节点)"
+
+msgid "14432"
+msgstr "该磁盘不是RAID(节点)"
+
+msgid "14433"
+msgstr "要删除的盘不在RAID中或不是热备盘(节点)"
+
+msgid "14434"
+msgstr "删除热备盘失败"
+
+msgid "14500"
+msgstr "网络连接不稳定，返回超时"
+
+msgid "14501"
+msgstr "服务端错误，请检查节点状况"
+
+msgid "14536"
+msgstr "节点不存在！"
+
+msgid "14537"
+msgstr "RAID已激活！"
+
+msgid "14538"
+msgstr "RAID不存在！"
+
+msgid "14539"
+msgstr "磁盘个数不够！"
+
+msgid "14540"
+msgstr "RAID激活失败！"
+
+#清除RAID信息时
+msgid "14641"
+msgstr "RAID所在节点不存在或无法连接"
+
+msgid "14642"
+msgstr "要清除的RAID盘不存在"
+
+msgid "14643"
+msgstr "操作失败"
+
+#15001-16000 登录信息
+msgid "15000"
+msgstr "未登录，请先登陆"
+
+msgid "15001"
+msgstr "用户名不存"
+
+msgid "15002"
+msgstr "登录密码错误"
+
+msgid "15003"
+msgstr "admin 已在使用中"
+
+msgid "16001"
+msgstr "未设置管理端"
+
+msgid "16002"
+msgstr "管理端冲突"
+
+msgid "16003"
+msgstr "服务端请求错误"
+
+msgid "16004"
+msgstr "管理端设置失败"
+
+msgid "16005"
+msgstr "获取管理端IP信息失败"
+
+msgid "load data"                
+msgstr "加载数据中..."
+
+msgid "input only include that"
+msgstr "输入只能包括英文字符,数字，@，短横线，下划线和圆点"
+
+msgid "please make sure that"
+msgstr "请确保输入的值在3和20字符之间"
+
